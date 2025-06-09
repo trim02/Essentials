@@ -132,7 +132,8 @@ public class Commandseen extends EssentialsCommand {
             sender.sendTl("whoisGeoLocation", location);
         }
         if (showIp) {
-            sender.sendTl("whoisIPAddress", user.getBase().getAddress().getAddress().toString());
+            //sender.sendTl("whoisIPAddress", user.getBase().getAddress().getAddress().toString());
+            sender.sendTl("whoisIPAddress", user.getLastLoginAddress());
         }
     }
 

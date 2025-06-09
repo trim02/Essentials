@@ -539,7 +539,8 @@ public abstract class UserData extends PlayerExtension implements IConf {
     public void setLastLogin(final long time) {
         holder.timestamps().login(time);
         if (base.getAddress() != null && base.getAddress().getAddress() != null) {
-            holder.ipAddress(base.getAddress().getAddress().getHostAddress());
+            //holder.ipAddress(base.getAddress().getAddress().getHostAddress());
+            holder.ipAddress("redacted"); // For privacy reasons, we redact the IP address;
         }
         config.save();
     }

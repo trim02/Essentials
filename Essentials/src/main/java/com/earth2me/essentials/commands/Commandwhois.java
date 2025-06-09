@@ -46,7 +46,8 @@ public class Commandwhois extends EssentialsCommand {
             sender.sendTl("whoisMoney", AdventureUtil.parsed(NumberUtil.displayCurrency(user.getMoney(), ess)));
         }
         if (!sender.isPlayer() || ess.getUser(sender.getPlayer()).isAuthorized("essentials.whois.ip")) {
-            sender.sendTl("whoisIPAddress", user.getBase().getAddress().getAddress().toString());
+            //sender.sendTl("whoisIPAddress", user.getBase().getAddress().getAddress().toString());
+            sender.sendTl("whoisIPAddress", user.getLastLoginAddress());
         }
         final String location = user.getGeoLocation();
         if (location != null && (!sender.isPlayer() || ess.getUser(sender.getPlayer()).isAuthorized("essentials.geoip.show"))) {
